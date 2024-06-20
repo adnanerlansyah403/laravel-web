@@ -1,14 +1,6 @@
 <template>
     <main>
-        <header>
-            <Link href="/homepage" :class="{
-            'text-red-500': $page.url == '/homepage'
-        }">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
-            <Link href="/articles/create">Create Article</Link>
-        </header>
-        <!-- <Link href="/logout">Logout</Link> -->
+        <Header />
         <article>
             <slot />
         </article>
@@ -17,9 +9,11 @@
 
 <script>
 import { Link } from '@inertiajs/vue3'
+import Header from '@/Components/Header.vue'
 
 export default {
     components: {
+        Header,
         Link,
     }
 }

@@ -61,9 +61,9 @@ class ArticleController extends Controller
      */
     public function edit(string $id)
     {
-        $article = Article::find($id);
+        // $article = Article::find($id);
         return Inertia::render("Article/Edit", [
-            "article" => $article,
+            "id" => $id,
         ]);
     }
 
